@@ -1,6 +1,14 @@
-require "gameoflife/version"
+require "./gameoflife/version"
+require './gameoflife/cell'
+require './gameoflife/game_board'
+require './gameoflife/game'
 
-module Gameoflife
-  class Error < StandardError; end
-  # Your code goes here...
-end
+puts "\nGame of Life\n\n"
+
+print 'Choose the size of the board: '
+size = gets.chomp.to_i
+
+print 'Choose the generations you want: '
+generations = gets.chomp.to_i
+
+GameofLife::Game.new(size, generations)
