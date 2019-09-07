@@ -20,7 +20,7 @@ module GameofLife
       end
   
       def self.print_board(array_board, generation)
-        puts "\nGeneration #{generation}"
+        puts "\nGeneration: #{generation}"
         array_board.each { |row| row.each { |column| print "#{column == 1 ? '*' : '.'} " }; puts "\n" }
       end
     end
